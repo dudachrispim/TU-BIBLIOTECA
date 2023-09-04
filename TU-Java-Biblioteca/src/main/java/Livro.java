@@ -44,4 +44,17 @@ public class Livro {
 	public void setEmprestado(boolean emprestado) {
 		this.emprestado = emprestado;
 	}
+	
+	public void emprestar() throws Exception {
+		if (!emprestado) {
+			emprestado = true;
+		}
+		else {
+			throw new Exception ("Livro já esprestado");
+		}
+	}
+	
+	public void retornar() {
+		emprestado = false;
+	}
 }
