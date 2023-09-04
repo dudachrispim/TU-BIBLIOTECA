@@ -45,12 +45,12 @@ public class Livro {
 		this.emprestado = emprestado;
 	}
 	
-	public void emprestar() throws Exception {
+	public void emprestar() {
 		if (!emprestado) {
 			emprestado = true;
 		}
 		else {
-			throw new Exception ("Livro já esprestado");
+			throw new RuntimeException("Livro já emprestado");
 		}
 	}
 	
